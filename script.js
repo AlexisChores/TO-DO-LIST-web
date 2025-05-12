@@ -29,13 +29,13 @@ taskItem.appendChild(taskSpan);
 
   // Botón de editar
 const editBtn = document.createElement('button');
-editBtn.textContent = 'Editar';
+editBtn.textContent = 'Edit';
 editBtn.onclick = () => editTask(taskItem, taskSpan);
 taskItem.appendChild(editBtn);
 
   // Botón de eliminar
 const deleteBtn = document.createElement('button');
-deleteBtn.textContent = 'Eliminar';
+deleteBtn.textContent = 'Delete';
 deleteBtn.onclick = () => {
     taskItem.remove(); // Eliminar tarea visualmente
     saveTasks(); // Actualizar el almacenamiento
@@ -64,7 +64,7 @@ editInput.type = 'text';
 editInput.value = currentText;
 
 const saveBtn = document.createElement('button');
-saveBtn.textContent = 'Guardar';
+saveBtn.textContent = 'Save';
 saveBtn.onclick = () => {
     taskSpan.textContent = editInput.value.trim() || currentText; // Guardar texto editado
     taskItem.replaceChild(taskSpan, editInput); // Volver al texto original
